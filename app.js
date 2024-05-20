@@ -2,12 +2,13 @@ const express = require("express");
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+require('dotenv').config()
 const registrationRoutes = require("./routes/registration");
 
 const app = express();
-const port = 3000;
-const mongoUri =
-  "mongodb+srv://swapnil:swapnil123@cluster0.pfhvhez.mongodb.net/";
+const port = process.env.PORT || 3000;
+const mongoUri = process.env.MONGO_URI;
+  
 
 // database connection
 mongoose

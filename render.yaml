@@ -1,0 +1,4 @@
+services:
+  - name: employee-registration
+    type: web
+    startCommand: node app.js
